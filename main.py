@@ -6,10 +6,9 @@
 keyword = "https"
 input_text ="hi I'm not malicious go to https://www.somethingmalicious.com"
 def slice_URL_position(input_text, text_to_strip):
-    sliced_string = " "
     if text_to_strip in input_text:
-        sliced_string = input_text.index(text_to_strip)
-    return  sliced_string
+        sliced_string_index = input_text.index(text_to_strip)
+    return  sliced_string_index
 # print(input_text[slice_URL_position(input_text, 'https'):])
 b = input_text.replace(input_text[slice_URL_position(input_text,'https'):], "<CENSORED CONTENT>")
 print(b)
